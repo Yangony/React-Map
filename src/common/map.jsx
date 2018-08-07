@@ -9,24 +9,34 @@ export default class Index extends Component {
 
   componentDidMount () {
     // 页面跳转后，返回顶部
+    let contextMenuPositon = ''
     let map = new AMap.Map("allmap",{
-       center:[117.000923,36.675807],
-       zoom:11,
-       resizeEnable: true
+       center:[93.666697,42.84179],
+       zoom:14,
+       resizeEnable: true,
+       layers: [
+           new AMap.TileLayer.Satellite(),
+           new AMap.TileLayer.RoadNet()
+       ],
     });
     let contextMenu = new AMap.ContextMenu();
     contextMenu.addItem("添加标记", function(e) {
-      map.setZoomAndCenter(4, [108.946609, 34.262324]);
+      var marker = new AMap.Marker({
+          map: map,
+          position: contextMenuPositon //基点位置
+      });
+      console.log(contextMenuPositon)
     }, 1);
     map.on('rightclick', function(e) {
       contextMenu.open(map, e.lnglat);
+       contextMenuPositon = e.lnglat;
     });
   }
 
   render () {
     return (
       <div id="allmap" className="outer home">
-
+        div
       </div>
     )
   }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import BMap from 'BMap'
+import AMap from 'AMap'
 export default class Index extends Component {
   constructor (props) {
     super(props)
@@ -9,11 +9,18 @@ export default class Index extends Component {
 
   componentDidMount () {
     // 页面跳转后，返回顶部
-    var map = new BMap.Map("allmap"); // 创建Map实例
-      map.centerAndZoom(new BMap.Point(116.404, 39.915), 11); // 初始化地图,设置中心点坐标和地图级别
-      map.addControl(new BMap.MapTypeControl()); //添加地图类型控件
-      map.setCurrentCity("北京"); // 设置地图显示的城市 此项是必须设置的
-      map.enableScrollWheelZoom(true); //开启鼠标滚轮缩放
+    let map = new AMap.Map("allmap",{
+       center:[117.000923,36.675807],
+       zoom:11,
+       resizeEnable: true
+    });
+    let contextMenu = new AMap.ContextMenu();
+    contextMenu.addItem("添加标记", function(e) {
+      map.setZoomAndCenter(4, [108.946609, 34.262324]);
+    }, 1);
+    map.on('rightclick', function(e) {
+      contextMenu.open(map, e.lnglat);
+    });
   }
 
   render () {

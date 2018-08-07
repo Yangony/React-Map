@@ -52,6 +52,9 @@ module.exports = {
     // initialization, it doesn't blow up the WebpackDevServer client, and
     // changing JS code would still trigger a refresh.
   ],
+  externals:{
+    'AMap':'AMap'
+  },
   output: {
     // Add /* filename */ comments to generated require()s in the output.
     pathinfo: true,
@@ -108,6 +111,7 @@ module.exports = {
 
       // First, run the linter.
       // It's important to do this before Babel processes the JS.
+      { test: /\.scss$/, loaders: ['style-loader', 'css-loader', 'sass-loader'],},
       {
         test: /\.(js|jsx|mjs)$/,
         enforce: 'pre',
@@ -199,7 +203,7 @@ module.exports = {
             // its runtime that would otherwise processed through "file" loader.
             // Also exclude `html` and `json` extensions so they get processed
             // by webpacks internal loaders.
-            exclude: [/\.(js|jsx|mjs)$/, /\.html$/, /\.json$/],
+            exclude: [/\.(js|jsx|mjs)$/, /\.html$/, /\.json$/,/.scss$/],
             loader: require.resolve('file-loader'),
             options: {
               name: 'static/media/[name].[hash:8].[ext]',
@@ -260,7 +264,4 @@ module.exports = {
   performance: {
     hints: false,
   },
-  externals: {
-    'BMap': 'BMap'
-  }
 };

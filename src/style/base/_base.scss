@@ -7,6 +7,7 @@ body, button, input, select, textarea { font: 12px/150% Arial, Verdana, "SimSun"
 ol, ul { list-style: none; }
 input { outline: none; }
 em, i { font-style: normal; }
+input { border: none }
 a { outline: 0; text-decoration: none; color: #333; }
 a:hover { text-decoration: none; color: #ff6600; }
 .clearfix, .layout { zoom: 1; }

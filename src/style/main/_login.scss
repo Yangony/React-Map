@@ -6,6 +6,9 @@
     background: rgba(0,0,0,.3);
     position: absolute; left: 50%; margin-left: -200px; top: 50%; margin-top: -250px;
     border-radius: 10px;
-    color: #fff; padding: 50px
+    color: #fff; padding: 50px;
+    input{
+      background: none; border-bottom: 1px solid #fff;
+    }
   }
 }

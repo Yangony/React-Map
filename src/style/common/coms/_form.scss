@@ -1,0 +1,12 @@
+.form_list {
+  padding: 50px;
+  .form_item{
+    input {
+      width: 100%; padding: 10px;
+      color: #fff;
+      &:placeholder {
+        color:#fff;
+      }
+    }
+  }
+}

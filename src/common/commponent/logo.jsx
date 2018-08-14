@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
-
-import Map from '@/common/map'
-export default class Index extends Component {
+export default class Login extends Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -14,8 +12,9 @@ export default class Index extends Component {
 
   render () {
     return (
-      <div id="allmap" className="outer home">
-        <Map></Map>
+      <div className="logo">
+        <img src="assest/KDpgvguMpGfqaHPjicRK.svg" alt=""/>
+        <h3>Ant Design Pro</h3>
       </div>
     )
   }

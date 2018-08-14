@@ -1,0 +1,11 @@
+.login {
+  background: #0066CC;
+  position: relative;
+  .login_main {
+    height: 400px; width: 300px;
+    background: rgba(0,0,0,.3);
+    position: absolute; left: 50%; margin-left: -200px; top: 50%; margin-top: -250px;
+    border-radius: 10px;
+    color: #fff; padding: 50px
+  }
+}

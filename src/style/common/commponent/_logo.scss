@@ -1,0 +1,12 @@
+.logo {
+  width: 300px; position: relative;
+  img{
+    width: 50px;
+    position: absolute; left: 10px; top:0;
+  }
+  h3{
+    padding-left: 70px; font-size: 30px; line-height: 50px;
+    font-family: "Myriad Pro","Helvetica Neue",Arial,Helvetica,sans-serif;
+    font-weight: 600;
+  }
+}

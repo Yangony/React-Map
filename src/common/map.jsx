@@ -21,10 +21,6 @@ export default class Index extends Component {
     });
     let contextMenu = new AMap.ContextMenu();
     contextMenu.addItem("添加标记", function(e) {
-      var marker = new AMap.Marker({
-          map: map,
-          position: contextMenuPositon //基点位置
-      });
       console.log(contextMenuPositon)
     }, 1);
     map.on('rightclick', function(e) {

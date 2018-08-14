@@ -18,7 +18,7 @@ export default class Login extends Component {
           <Logo></Logo>
           <div className="form_list">
             <div className="form_item">
-              <input placeholder="请输入您的登录账号"/>
+              <label>帐号：</label>
               <input placeholder="请输入您的登录账号"/>
             </div>
           </div>

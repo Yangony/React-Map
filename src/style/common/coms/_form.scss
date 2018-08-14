@@ -1,17 +1,22 @@
 .form_list {
-  padding: 50px;
   font-size: 16px;
   .form_item{
-    position: relative; padding-left: 80px; border-bottom: 1px solid #fff;
+    position: relative; margin-bottom: 20px;
     label {
-      position: absolute;left: 0; height: 40px; line-height: 40px;
+      position: absolute;left: 0; height: 45px; line-height: 45px; color: #CDCDC1;
     }
     input {
-      width: 100%; padding: 10px; background: none;
-      color: #fff;
+      padding: 10px; background: none; font-size: 16px; padding-left: 60px;
+      border-bottom: 1px solid #eee;
+      width: 100%;
+      color: #CDCDC1;
       &::placeholder {
-        color:#fff;
+        color:#CDCDC1;
+        font-size: 16px;
       }
+    }
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 }

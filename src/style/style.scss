@@ -1,6 +1,6 @@
 //$res: "/erjimulu/image/"; // 打包时用此路径
-$res: "/image/"; // 本地开发是用此路径
-
+$res: "/assest/"; // 本地开发是用此路径
+@import '~antd/dist/antd.css';
 @import "main/main";
 @import "base/main";
 @import "common/main";

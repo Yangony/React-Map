@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
-import Map from '@/common/map'
+import Loading from '@/common/commponent/loading'
+// import Map from '@/common/map'
 export default class Index extends Component {
   constructor (props) {
     super(props)
@@ -9,13 +10,13 @@ export default class Index extends Component {
   }
 
   componentDidMount () {
-
+    Loading({type: 'full'})
   }
 
   render () {
     return (
-      <div id="allmap" className="outer home">
-        <Map></Map>
+      <div id="allmap" className="page home">
+        {/* <Map></Map> */}
       </div>
     )
   }

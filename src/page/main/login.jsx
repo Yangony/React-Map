@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 import { Button, Row, Col, message } from 'antd'
+import Loading from '@/common/commponent/loading'
 
 import Logo from '@/common/commponent/logo'
 export default class Login extends Component {
@@ -15,13 +16,14 @@ export default class Login extends Component {
   }
 
   login () {
+    Loading({type: 'full'})
     message.error('请输入您的登录账号！');
   }
 
   render () {
     return (
       <div className="page login">
-        <div className="login_main">
+        <div className="login_main" id="login">
           <Logo></Logo>
           <div className="login_box">
             <div className="form_list">

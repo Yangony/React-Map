@@ -1,0 +1,78 @@
+#chrysan_loading {
+  .chrysan_loading {
+    position: fixed; width: 100vw; height: 100vh;
+    background: rgba(0,0,0,.2);
+    top:0; left: 0;
+    .chrysan_loading_layout {
+      height: 100px; width: 100px;
+      position: fixed; top:50%; left: 50%; text-align: center; color: #fff;
+      margin-left: -50px; margin-top: -50px; padding: 25px 0; border-radius: 10px;
+      background: rgba(0,0,0,.5);
+      .ball-clip-rotate-pulse {
+        position: relative;
+        height: 40px; width: 40px; margin: auto;
+        div {
+          -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          border-radius: 100%;
+          &:first-child {
+            background: #FFF;
+            height: 16px;
+            width: 16px;
+            top: 50%; margin-top: -8px;
+            left: 50%; margin-left: -8px;
+            -webkit-animation: scale 1s 0s cubic-bezier(0.09, 0.57, 0.49, 0.9) infinite;
+            animation: scale 1s 0s cubic-bezier(0.09, 0.57, 0.49, 0.9) infinite;
+          }
+          &:last-child {
+            position: absolute;
+            border: 2px solid #FFF;
+            width: 30px;
+            height: 30px;
+            left: 50%; margin-left: -15px;
+            top: 50%; margin-top: -15px;
+            background: transparent;
+            border: 2px solid;
+            border-color: #FFF transparent#FFF transparent;
+            -webkit-animation: rotate 1s 0s cubic-bezier(0.09, 0.57, 0.49, 0.9) infinite;
+            animation: rotate 1s 0s cubic-bezier(0.09, 0.57, 0.49, 0.9) infinite;
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg) scale(1);
+    transform: rotate(0deg) scale(1);
+  }
+
+  50% {
+    -webkit-transform: rotate(180deg) scale(0.6);
+    transform: rotate(180deg) scale(0.6);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg) scale(1);
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes scale {
+  30% {
+    -webkit-transform: scale(0.3);
+    transform: scale(0.3);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}

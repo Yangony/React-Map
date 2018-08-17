@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
-import { Button, Row, Col, message } from 'antd'
-import Loading from '@/common/commponent/loading'
+import { Button, Row, Col, message, Icon } from 'antd'
+import Loading, {closeLoading} from '@/common/commponent/loading'
 
 import Logo from '@/common/commponent/logo'
 export default class Login extends Component {
@@ -18,6 +18,9 @@ export default class Login extends Component {
   login () {
     Loading({type: 'full'})
     message.error('请输入您的登录账号！');
+    setTimeout(function () {
+      closeLoading()
+    }, 1000);
   }
 
   render () {
@@ -28,11 +31,11 @@ export default class Login extends Component {
           <div className="login_box">
             <div className="form_list">
               <div className="form_item">
-                <label>帐号：</label>
+                <label><Icon type="user" /></label>
                 <input placeholder="请输入您的登录账号"/>
               </div>
               <div className="form_item">
-                <label>密码：</label>
+                <label><Icon type="lock" /></label>
                 <input placeholder="请输入您的登录密码"/>
               </div>
               <div className="form_item">

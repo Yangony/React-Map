@@ -14,7 +14,7 @@ export default class Login extends Component {
     return (
       <div className="logo">
         <img src="assest/KDpgvguMpGfqaHPjicRK.svg" alt=""/>
-        <h3>Ant Design Pro</h3>
+        <h3>军工驱鸟控制系统</h3>
       </div>
     )
   }

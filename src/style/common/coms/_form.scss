@@ -3,10 +3,10 @@
   .form_item{
     position: relative; margin-bottom: 20px;
     label {
-      position: absolute;left: 0; height: 45px; line-height: 45px; color: #CDCDC1;
+      position: absolute;left: 10px; height: 45px; line-height: 45px; color: #CDCDC1;
     }
     input {
-      padding: 10px; background: none; font-size: 16px; padding-left: 60px;
+      padding: 10px; background: none; font-size: 16px; padding-left: 35px;
       border-bottom: 1px solid #eee;
       width: 100%;
       color: #CDCDC1;
@@ -18,5 +18,8 @@
     &:last-child {
       margin-bottom: 0;
     }
+  }
+  .form_item_tips {
+    font-size: 14px; text-align: center; margin-top: -10px
   }
 }

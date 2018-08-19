@@ -20,7 +20,7 @@ export default class Login extends Component {
     message.error('请输入您的登录账号！');
     setTimeout(function () {
       closeLoading()
-    }, 1000);
+    }, 3000);
   }
 
   render () {

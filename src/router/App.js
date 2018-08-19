@@ -11,6 +11,7 @@ export default class App extends Component {
         <Switch>
         <Route exact path='/' component={Index} />
         <Route exact path='/region' component={Region} />
+        <Route exact path='/region' component={Region} />
         </Switch>
       </Router>
     )

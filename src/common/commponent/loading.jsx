@@ -19,7 +19,7 @@ class Loading extends Component {
     return (
       <div className={`chrysan_loading ${type ? type : 'block'}`}>
         <div className="chrysan_loading_layout">
-          <div class="ball-clip-rotate-pulse">
+          <div className="ball-clip-rotate-pulse">
             <div></div>
             <div></div>
           </div>

@@ -8,7 +8,7 @@ ol, ul { list-style: none; }
 input { outline: none; }
 em, i { font-style: normal; }
 input { border: none }
-a { outline: 0; text-decoration: none; color: #333; }
+a { outline: 0; text-decoration: none;}
 a:hover { text-decoration: none; color: #ff6600; }
 .clearfix, .layout { zoom: 1; }
 .clearfix:after, .layout:after { visibility: hidden; display: block; content: "."; font-size: 0; height: 0; clear: both; }
@@ -17,4 +17,15 @@ a:hover { text-decoration: none; color: #ff6600; }
   width: 100vw;
   height: 100vh;
   // background: #4a86e8;
+}
+@mixin clearfix {
+  &:before,
+      &:after {
+          content: "";
+          display: table;
+      }
+      &:after {
+          clear: both;
+      }
+
 }

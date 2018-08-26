@@ -1,0 +1,29 @@
+.header_right {
+  padding-right: 30px; height: 64px;
+  .top_nav {
+    display: inline-block; height: 64px; float: left; padding-right: 50px; color: #fff;
+    ul {
+      @extend .clearfix;
+      li {
+        @extend .clearfix;
+        display: inline-block; padding: 0 10px;
+      }
+    }
+  }
+  .avatar {
+    line-height: 30px; color: #fff; display: inline-block; position: relative;
+    float: left;
+    @extend .clearfix;
+    .user_name {
+      display: inline-block;  line-height: 22px; padding: 10px; font-size: 14px;
+      width: 150px;
+    }
+    .avatar_img{
+      position: absolute; right: 0; top:50%; margin-top: -20px; display: inline-block;
+      background: none; cursor: pointer;
+      .ant-avatar {
+        border:2px solid #fff;
+      }
+    }
+  }
+}

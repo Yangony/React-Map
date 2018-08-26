@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-
-import { Button, Row, Col, message, Icon, Layout, Menu } from 'antd'
-import Logo from '@/common/commponent/logo'
+import {Link} from "react-router-dom";
+import { Icon, Layout, Button } from 'antd'
+// import Logo from '@/common/commponent/logo'
 import Sider from '@/common/commponent/sider'
-
+import ConsoleHeader from '@/common/commponent/page/console/header'
 const { Header, Content } = Layout
 
 
@@ -23,24 +23,21 @@ export default class Login extends Component {
    this.setState({
      collapsed: !this.state.collapsed,
    });
-   console.log(!this.state.collapsed)
  }
 
   render () {
     return (
-      <div className="page layout">
+      <div className="page layout console">
         <Layout>
           <Sider collapsed={this.state.collapsed}></Sider>
           <Layout>
-            <Header style={{ background: '#fff', padding: 0 }}>
-              <Icon
-                className="trigger"
-                type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}
-                onClick={this.toggle}
-              />
+            <Header>
+              <div className="sider_tig"><Icon className="trigger" type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'} onClick={this.toggle} /></div>
+              <div className="console_userinfo">
+                <ConsoleHeader></ConsoleHeader>
+              </div>
             </Header>
-            <Content style={{ margin: '24px 16px', padding: 24, background: '#fff', minHeight: 280 }}>
-              Content
+            <Content style={{padding: 24, background: '#fff', minHeight: 280 }}>
             </Content>
           </Layout>
         </Layout>

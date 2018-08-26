@@ -1,0 +1,30 @@
+.ant-layout {
+  height: 100vh;
+  background-image: linear-gradient(to right, #A670CE 0%, #54409B 100%);
+  .logo_index {
+    padding: 10px;
+  }
+  .ant-layout-sider {
+    background: $sider-background-color;
+    .ant-menu {
+      background: $sider-background-color; color: #fff; border: none;
+      .ant-menu-item{
+        &.ant-menu-item-selected  {
+          background:  $sider-background-color-hover; color: #fff;
+        }
+        &:active {
+          background: $sider-background-color-hover; color: #fff;
+        }
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+  .ant-layout-header {
+    background: none; padding: 0;
+  }
+  .ant-layout-content {
+    border-radius: 15px 15px 0 0; margin: 0 16px 0 16px;
+  }
+}

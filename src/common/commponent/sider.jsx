@@ -31,35 +31,35 @@ export default class Login extends Component {
         <Menu theme="tehm" mode="inline" defaultSelectedKeys={['1']}>
           <Menu.Item key="1">
             <Icon type="user" />
-            <span>队伍与装备</span>
+            <span>公告系统</span>
           </Menu.Item>
           <Menu.Item key="2">
             <Icon type="api" />
-            <span>应急专家</span>
+            <span>鸟情通报</span>
           </Menu.Item>
           <Menu.Item key="3">
             <Icon type="disconnect" />
-            <span>危险源</span>
+            <span>鸟类信息</span>
           </Menu.Item>
           <Menu.Item key="4">
             <Icon type="fork" />
-            <span>重点路线</span>
+            <span>机场鸟类分布</span>
           </Menu.Item>
           <Menu.Item key="5">
             <Icon type="global" />
-            <span>重点区域</span>
+            <span>区域鸟类分布</span>
           </Menu.Item>
           <Menu.Item key="6">
             <Icon type="share-alt" />
-            <span>渠道信息</span>
+            <span>岗哨管理</span>
           </Menu.Item>
           <Menu.Item key="7">
             <Icon type="usergroup-add" />
-            <span>人力热力</span>
+            <span>数据统计</span>
           </Menu.Item>
           <Menu.Item key="8">
             <Icon type="cloud" />
-            <span>天气实况</span>
+            <span>系统维护</span>
           </Menu.Item>
           <Menu.Item key="9">
             <Icon type="video-camera" />

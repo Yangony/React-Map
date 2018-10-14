@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import {Link} from "react-router-dom";
-import { Icon, Layout, Button } from 'antd'
+// import {Link} from "react-router-dom";
+import { Icon, Layout } from 'antd'
 // import Logo from '@/common/commponent/logo'
 import Sider from '@/common/commponent/sider'
 import ConsoleHeader from '@/common/commponent/page/console/header'

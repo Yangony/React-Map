@@ -4,6 +4,9 @@ import { Button, Row, Col, message, Icon } from 'antd'
 import Loading, {closeLoading} from '@/common/commponent/loading'
 
 import Logo from '@/common/commponent/logo'
+
+import API from '@/tools/api'
+
 export default class Login extends Component {
   constructor (props) {
     super(props)
@@ -17,6 +20,9 @@ export default class Login extends Component {
 
   login () {
     Loading({type: 'full'})
+    API.post('login', null, r=> {
+      
+    })
     message.error('请输入您的登录账号！');
     setTimeout(function () {
       closeLoading()
